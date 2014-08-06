@@ -1,0 +1,4 @@
+'.text.html':
+  'React Boilerplate':
+    'prefix': 'react'
+    'body': '<script src="http://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.11.0/es6-shim.min.js"></script>\n<script src="http://fb.me/react-with-addons-0.11.0.js"></script>\n<script src="http://fb.me/JSXTransformer-0.11.0.js"></script>\n\n<div id="$1Root"></div>\n\n<script type="text/jsx;harmony=true">/** @jsx React.DOM */\n\nvar $1 = React.createClass({\n\trender(){\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t${0:Hello World}\n\t\t\t</div>\n\t\t);\n\t},\n});\n\nReact.renderComponent(\n\t<$1 />,\n\tdocument.getElementById(\'$1Root\')\n);\n\n</script>\n'

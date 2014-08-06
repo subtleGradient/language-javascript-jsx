@@ -1,0 +1,10 @@
+{
+  "name": "language-javascript-jsx",
+  "version": "0.0.0",
+  "description": "JavaScript with JSX Bundle for Atom",
+  "repository": "https://github.com/subtlegradient/language-javascript-jsx",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

@@ -7,7 +7,13 @@
 'patterns': [
   {
     'begin': '`'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.es6'
     'end': '`'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.es6'
     'name': 'string.quoted.other.es6'
     'patterns': [
       {
@@ -36,11 +42,37 @@
   {
     'captures':
       '1':
+        'name': 'variable.other.readwrite.js'
+      '2':
+        'name': 'storage.type.class.typescriptish'
+      '3':
+        'name': 'punctuation.separator.continuation.typescriptish'
+      '4':
+        'name': 'storage.type.function.name'
+      '5':
+        'name': 'meta.something'
+    'match': '([_$a-zA-Z][_$a-zA-Z0-9]*)(\\s*(:)\\s*([_$a-zA-Z][_$a-zA-Z0-9]*)(?:<([^>]*)>)?)'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'variable.other.readwrite.js'
+      '2':
+        'name': 'storage.type.class.typescriptish'
+    'match': '([_$a-zA-Z][_$a-zA-Z0-9]*)\\s*(<[^>]*>)'
+  }
+  {
+    'captures':
+      '1':
         'name': 'punctuation.definition.preprocessor.begin.hack'
       '2':
         'name': 'punctuation.definition.preprocessor.end.hack'
     'match': '(/\\*)(?:\\??[_$a-zA-Z0-9]+(?:<[^>]+>)?\\|?)+(\\*/ )'
     'name': 'storage.type.class.hack'
+  }
+  {
+    'match': '(?<=[_$a-zA-Z0-9\\)\\]\\}>])\\s*<'
+    'name': 'keyword.operator.comparison.js'
   }
   {
     'include': '#block_tag'

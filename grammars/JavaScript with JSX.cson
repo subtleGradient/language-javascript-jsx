@@ -51,6 +51,7 @@
         'name': 'storage.type.function.name'
       '5':
         'name': 'meta.something'
+    'disabled': 1
     'match': '([_$a-zA-Z][_$a-zA-Z0-9]*)(\\s*(:)\\s*([_$a-zA-Z][_$a-zA-Z0-9]*)(?:<([^>]*)>)?)'
   }
   {

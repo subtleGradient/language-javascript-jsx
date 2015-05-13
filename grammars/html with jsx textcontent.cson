@@ -1,0 +1,55 @@
+fileTypes: []
+injectionSelector: "meta.tag.block.begin.jsx, meta.scope.jsx"
+name: "HTML with JSX textContent"
+patterns: [
+  {
+    begin: "\\{"
+    beginCaptures:
+      "0":
+        name: "punctuation.section.embedded.begin.jsx"
+    contentName: "source.js.jsx"
+    end: "}"
+    endCaptures:
+      "0":
+        name: "punctuation.section.embedded.end.jsx"
+    name: "meta.embedded.expression.jsx"
+    patterns: [
+      {
+        include: "source.js.jsx"
+      }
+    ]
+  }
+  {
+    begin: "\""
+    beginCaptures:
+      "0":
+        name: "punctuation.definition.string.begin.jsx"
+    contentName: "meta.scope.inner"
+    end: "\""
+    endCaptures:
+      "0":
+        name: "punctuation.definition.string.end.jsx"
+    name: "string.quoted.double.jsx"
+    patterns: [
+      {
+        disabled: 1
+        match: "\\."
+        name: "constant.character.escape.js"
+      }
+    ]
+  }
+  {
+    begin: "'"
+    contentName: "meta.scope.inner"
+    end: "'"
+    name: "string.quoted.single.jsx"
+    patterns: [
+      {
+        disabled: 1
+        match: "\\."
+        name: "constant.character.escape.js"
+      }
+    ]
+  }
+]
+scopeName: "source.js.jsx.react"

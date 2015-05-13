@@ -136,7 +136,7 @@
         'name': 'entity.name.function.$1.es'
     'comment': '13 Function Definition http://es5.github.com/#x13'
     'end': '(?<=})'
-    'name': 'meta.$1.${2:-unnamed}'
+    'name': 'meta.$1'
     'patterns': [
       {
         'begin': '\\G'
@@ -560,7 +560,7 @@
         'name': 'entity.name.function.$1.js'
     'comment': '13 Function Definition http://es5.github.com/#x13'
     'end': '(?<=})'
-    'name': 'meta.$1.${2:-unnamed}'
+    'name': 'meta.$1'
     'patterns': [
       {
         'begin': '\\G'

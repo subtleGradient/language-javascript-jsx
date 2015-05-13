@@ -1,237 +1,240 @@
-'fileTypes': [
-  'jsx'
-  'react.js'
+fileTypes: [
+  "jsx"
+  "react.js"
 ]
-'firstLineMatch': '@jsx'
-'name': 'JavaScript with JSX'
-'patterns': [
+firstLineMatch: "@jsx"
+name: "JavaScript with XML"
+patterns: [
   {
-    'begin': '`'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.es6'
-    'end': '`'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.es6'
-    'name': 'string.quoted.other.es6'
-    'patterns': [
+    begin: "`"
+    beginCaptures:
+      "0":
+        name: "punctuation.definition.string.begin.es6"
+    end: "`"
+    endCaptures:
+      "0":
+        name: "punctuation.definition.string.end.es6"
+    name: "string.quoted.other.es6"
+    patterns: [
       {
-        'match': '\\\\[\\s\\S]'
-        'name': 'constant.character.escape.es'
+        match: "\\\\[\\s\\S]"
+        name: "constant.character.escape.es"
       }
       {
-        'begin': '\\$\\{'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.section.embedded.begin.es6'
-        'contentName': 'source.js.jsx'
-        'end': '}'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.section.embedded.begin.es6'
-        'name': 'meta.embedded.expression.es6'
-        'patterns': [
+        begin: "\\$\\{"
+        beginCaptures:
+          "0":
+            name: "punctuation.section.embedded.begin.es6"
+        contentName: "source.js.jsx"
+        end: "}"
+        endCaptures:
+          "0":
+            name: "punctuation.section.embedded.begin.es6"
+        name: "meta.embedded.expression.es6"
+        patterns: [
           {
-            'include': '$self'
+            include: "$self"
           }
         ]
       }
     ]
   }
   {
-    'captures':
-      '1':
-        'name': 'variable.other.readwrite.js'
-      '2':
-        'name': 'storage.type.class.typescriptish'
-      '3':
-        'name': 'punctuation.separator.continuation.typescriptish'
-      '4':
-        'name': 'storage.type.function.name'
-      '5':
-        'name': 'meta.something'
-    'disabled': 1
-    'match': '([_$a-zA-Z][_$a-zA-Z0-9]*)(\\s*(:)\\s*([_$a-zA-Z][_$a-zA-Z0-9]*)(?:<([^>]*)>)?)'
+    captures:
+      "1":
+        name: "variable.other.readwrite.js"
+      "2":
+        name: "storage.type.class.typescriptish"
+      "3":
+        name: "punctuation.separator.continuation.typescriptish"
+      "4":
+        name: "storage.type.function.name"
+      "5":
+        name: "meta.something"
+    disabled: 1
+    match: "([_$a-zA-Z][_$a-zA-Z0-9]*)(\\s*(:)\\s*([_$a-zA-Z][_$a-zA-Z0-9]*)(?:<([^>]*)>)?)"
   }
   {
-    'captures':
-      '1':
-        'name': 'variable.other.readwrite.js'
-      '2':
-        'name': 'storage.type.class.typescriptish'
-    'match': '([_$a-zA-Z][_$a-zA-Z0-9]*)\\s*(<[^>]*>)'
+    captures:
+      "1":
+        name: "variable.other.readwrite.js"
+      "2":
+        name: "storage.type.class.typescriptish"
+    match: "([_$a-zA-Z][_$a-zA-Z0-9]*)(<[^>]*>)"
   }
   {
-    'captures':
-      '1':
-        'name': 'punctuation.definition.preprocessor.begin.hack'
-      '2':
-        'name': 'punctuation.definition.preprocessor.end.hack'
-    'match': '(/\\*)(?:\\??[_$a-zA-Z0-9]+(?:<[^>]+>)?\\|?)+(\\*/ )'
-    'name': 'storage.type.class.hack'
+    captures:
+      "1":
+        name: "punctuation.definition.preprocessor.begin.hack"
+      "2":
+        name: "punctuation.definition.preprocessor.end.hack"
+    match: "(/\\*)(?:\\??[_$a-zA-Z0-9]+(?:<[^>]+>)?\\|?)+(\\*/ )"
+    name: "storage.type.class.hack"
   }
   {
-    'match': '(?<=[_$a-zA-Z0-9\\)\\]\\}>])\\s*<'
-    'name': 'keyword.operator.comparison.js'
+    match: "(?<=[_$a-zA-Z0-9\\)\\]\\}>])\\s*<"
+    name: "keyword.operator.comparison.js"
   }
   {
-    'include': '#block_tag'
+    include: "#block_tag"
   }
   {
-    'begin': '(?=<(\\w+))'
-    'disabled': 1
-    'end': '(?<=/>)|(?<=</\\1>)'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.tag.html.jsx'
-    'name': 'text.html.embedded.$1.jsx'
-    'patterns': [
+    begin: "(?=<(\\w+))"
+    disabled: 1
+    end: "(?<=/>)|(?<=</\\1>)"
+    endCaptures:
+      "0":
+        name: "punctuation.definition.tag.html.jsx"
+    name: "text.html.embedded.$1.jsx"
+    patterns: [
       {
-        'include': 'text.html.5'
+        include: "text.html.5"
       }
     ]
   }
   {
-    'begin': '{'
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.section.group.begin.es'
-    'comment': '12.1 Block http://es5.github.com/#x12.1'
-    'contentName': 'meta.block.es'
-    'end': '}'
-    'endCaptures':
-      '0':
-        'name': 'punctuation.section.group.end.es'
-    'patterns': [
+    begin: "{"
+    beginCaptures:
+      "0":
+        name: "punctuation.section.group.begin.es"
+    comment: "12.1 Block http://es5.github.com/#x12.1"
+    contentName: "meta.block.es"
+    end: "}"
+    endCaptures:
+      "0":
+        name: "punctuation.section.group.end.es"
+    patterns: [
       {
-        'include': '$self'
+        include: "$self"
       }
     ]
   }
   {
-    'begin': '\\b(function|(?:get|set)(?=\\s+[_$a-zA-Z]))\\b(?:\\s+((?i)[_$a-z][_$a-z0-9]*))?'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.control.def.es'
-      '2':
-        'name': 'entity.name.function.$1.es'
-    'comment': '13 Function Definition http://es5.github.com/#x13'
-    'end': '(?<=})'
-    'name': 'meta.$1.${2:-unnamed}'
-    'patterns': [
+    begin: "\\b(function|(?:get|set)(?=\\s+[_$a-zA-Z]))\\b(?:\\s+((?i)[_$a-z][_$a-z0-9]*))?"
+    beginCaptures:
+      "1":
+        name: "keyword.control.def.es"
+      "2":
+        name: "entity.name.function.$1.es"
+    comment: "13 Function Definition http://es5.github.com/#x13"
+    end: "(?<=})"
+    name: "meta.$1"
+    patterns: [
       {
-        'begin': '\\G'
-        'end': '(?<=\\))'
-        'patterns': [
+        begin: "\\G"
+        end: "(?<=\\))"
+        patterns: [
           {
-            'begin': '\\G(?!\\()'
-            'comment': 'function name'
-            'end': '(?=\\()'
-            'patterns': [
+            begin: "\\G(?!\\()"
+            comment: "function name"
+            end: "(?=\\()"
+            patterns: [
               {
-                'include': '#comments'
+                include: "#comments"
               }
               {
-                'match': '\\b(?i)[_$a-z][_$a-z0-9]*\\b'
-                'name': 'entity.name.function.$1.es'
+                match: "\\b(?i)[_$a-z][_$a-z0-9]*\\b"
+                name: "entity.name.function.$1.es"
               }
             ]
           }
           {
-            'begin': '\\('
-            'beginCaptures':
-              '0':
-                'name': 'punctuation.definition.parameters.begin.function.es'
-            'comment': 'function parameters'
-            'contentName': 'meta.function.parameters'
-            'end': '\\)'
-            'endCaptures':
-              '0':
-                'name': 'punctuation.definition.parameters.end.function.es'
-            'name': 'meta.function.parameters'
-            'patterns': [
+            begin: "\\("
+            beginCaptures:
+              "0":
+                name: "punctuation.definition.parameters.begin.function.es"
+            comment: "function parameters"
+            contentName: "meta.function.parameters"
+            end: "\\)"
+            endCaptures:
+              "0":
+                name: "punctuation.definition.parameters.end.function.es"
+            name: "meta.function.parameters"
+            patterns: [
               {
-                'include': '#comments'
+                include: "#comments"
               }
               {
-                'match': '\\b(?i)[_$a-z][_$a-z0-9]*\\b'
-                'name': 'variable.parameter.function.es'
+                match: "\\b(?i)[_$a-z][_$a-z0-9]*\\b"
+                name: "variable.parameter.function.es"
               }
               {
-                'match': ','
-                'name': 'punctuation.separator.parameters.function.es'
+                match: ","
+                name: "punctuation.separator.parameters.function.es"
               }
             ]
           }
         ]
       }
       {
-        'include': '#comments'
+        include: "#comments"
       }
       {
-        'begin': '{'
-        'beginCaptures':
-          '0':
-            'name': 'punctuation.definition.function.begin.es'
-        'comment': 'function body'
-        'contentName': 'meta.function.body'
-        'end': '}'
-        'endCaptures':
-          '0':
-            'name': 'punctuation.definition.function.end.es'
-        'patterns': [
+        begin: "{"
+        beginCaptures:
+          "0":
+            name: "punctuation.definition.function.begin.es"
+        comment: "function body"
+        contentName: "meta.function.body"
+        end: "}"
+        endCaptures:
+          "0":
+            name: "punctuation.definition.function.end.es"
+        patterns: [
           {
-            'include': '$self'
+            include: "$self"
           }
         ]
       }
     ]
   }
   {
-    'include': 'source.js.subtlegradient'
+    include: "source.js"
   }
 ]
-'repository':
-  'block_tag':
-    'patterns': [
+repository:
+  block_tag:
+    patterns: [
       {
-        'begin': '(?=(<)([a-zA-Z0-9_$][^\\s</>]*))'
-        'contentName': 'meta.block.inner.${2/[:.]/-/g}.jsx'
-        'end': '(</)(\\2)(>)|(/>)'
-        'endCaptures':
-          '0':
-            'name': 'meta.tag.block.end.${2/[:.]/-/g}.jsx'
-          '2':
-            'name': 'entity.name.tag.${2/[:.]/-/g}.jsx'
-          '4':
-            'name': 'meta.tag.block.begin.${2/[:.]/-/g}.jsx'
-        'name': 'meta.scope.tag.block.${2/[:.]/-/g}.jsx'
-        'patterns': [
+        begin: "(return\\s*)?(?=(<)([a-zA-Z0-9_$][^\\s</>]*))"
+        beginCaptures:
+          "1":
+            name: "keyword.control.js"
+        contentName: "meta.block.inner.jsx"
+        end: "(</)(\\3)(>)|(/>)"
+        endCaptures:
+          "0":
+            name: "meta.tag.block.end.jsx"
+          "2":
+            name: "entity.name.tag.jsx"
+          "4":
+            name: "meta.tag.block.begin.jsx"
+        name: "meta.scope.tag.block.jsx"
+        patterns: [
           {
-            'begin': '\\G(<)([^\\s</>]+)'
-            'beginCaptures':
-              '2':
-                'name': 'entity.name.tag.${2/[:.]/-/g}.jsx'
-            'end': '>|(?=/>)'
-            'name': 'meta.tag.block.begin.${2/[:.]/-/g}.jsx'
-            'patterns': [
+            begin: "\\G(<)([^\\s</>]+)"
+            beginCaptures:
+              "2":
+                name: "entity.name.tag.jsx"
+            end: ">|(?=/>)"
+            name: "meta.tag.block.begin.jsx"
+            patterns: [
               {
-                'include': '#attr'
+                include: "#attr"
               }
             ]
           }
           {
-            'begin': '(?<=[^/]>)'
-            'end': '(?=</)'
-            'name': 'meta.scope.jsx'
-            'patterns': [
+            begin: "(?<=[^/]>)(?!>)"
+            end: "(?<!>)(?=</)"
+            name: "meta.scope.jsx"
+            patterns: [
               {
-                'include': '#block_tag'
+                include: "#block_tag"
               }
             ]
           }
         ]
       }
     ]
-'scopeName': 'source.js.jsx'
+scopeName: "source.js.jsx"

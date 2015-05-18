@@ -196,12 +196,12 @@ repository:
   block_tag:
     patterns: [
       {
-        begin: "(return\\s*)?(?=(<)([a-zA-Z0-9_$][^\\s</>]*))"
-        beginCaptures:
-          "1":
-            name: "keyword.control.js"
-        contentName: "meta.block.inner.jsx"
-        end: "(</)(\\3)(>)|(/>)"
+        match: "</([^>]*)>"
+        name: "invalid.illegal.tag.end.jsx"
+      }
+      {
+        begin: "(?=(<)([a-zA-Z0-9_$][^\\s</>]*))"
+        end: "(</)(\\2)(>)|(/>)"
         endCaptures:
           "0":
             name: "meta.tag.block.end.jsx"
@@ -225,8 +225,16 @@ repository:
             ]
           }
           {
-            begin: "(?<=[^/]>)(?!>)"
-            end: "(?<!>)(?=</)"
+            match: "</([^>]*)>"
+            name: "invalid.illegal.tag.end.jsx"
+          }
+          {
+            match: "<(/[a-zA-Z0-9_$.]*)?($|\\s)"
+            name: "invalid.illegal.tag.end.jsx"
+          }
+          {
+            begin: "(?<=>)(?!<$)(?!<\\s)(?!</)"
+            end: "(?=</)"
             name: "meta.scope.jsx"
             patterns: [
               {

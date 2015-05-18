@@ -1,9 +1,9 @@
 fileTypes: [
+  "js"
   "jsx"
   "react.js"
 ]
-firstLineMatch: "@jsx"
-name: "JavaScript with XML"
+name: "JavaScript with JSX"
 patterns: [
   {
     begin: "`"

@@ -189,7 +189,7 @@ patterns: [
     ]
   }
   {
-    include: "source.js"
+    include: "source.js.subtlegradient"
   }
 ]
 repository:

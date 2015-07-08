@@ -1,0 +1,23 @@
+fileTypes: []
+injectionSelector: "source.js.jsx meta.tag.block.begin, meta.scope.jsx"
+name: "HTML with JSX textContent"
+patterns: [
+  {
+    begin: "\\{"
+    beginCaptures:
+      "0":
+        name: "punctuation.section.embedded.begin.jsx"
+    contentName: "source.js.jsx"
+    end: "}"
+    endCaptures:
+      "0":
+        name: "punctuation.section.embedded.end.jsx"
+    name: "meta.embedded.expression.jsx"
+    patterns: [
+      {
+        include: "source.js.jsx"
+      }
+    ]
+  }
+]
+scopeName: "source.js.jsx.react"

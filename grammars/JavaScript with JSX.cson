@@ -85,7 +85,7 @@ patterns: [
     endCaptures:
       "0":
         name: "punctuation.definition.tag.html.jsx"
-    name: "text.html.embedded.$1.jsx"
+    name: "text.html.embedded.jsx"
     patterns: [
       {
         include: "text.html.5"
@@ -115,10 +115,10 @@ patterns: [
       "1":
         name: "keyword.control.def.es"
       "2":
-        name: "entity.name.function.$1.es"
+        name: "entity.name.function.es"
     comment: "13 Function Definition http://es5.github.com/#x13"
     end: "(?<=})"
-    name: "meta.$1"
+    name: "meta"
     patterns: [
       {
         begin: "\\G"
@@ -134,7 +134,7 @@ patterns: [
               }
               {
                 match: "\\b(?i)[_$a-z][_$a-z0-9]*\\b"
-                name: "entity.name.function.$1.es"
+                name: "entity.name.function.es"
               }
             ]
           }
@@ -216,7 +216,7 @@ repository:
             beginCaptures:
               "2":
                 name: "entity.name.tag.jsx"
-            end: ">|(?=/>)"
+            end: "(>)|(?=/>)"
             name: "meta.tag.block.begin.jsx"
             patterns: [
               {

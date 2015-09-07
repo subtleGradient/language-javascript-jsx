@@ -220,7 +220,7 @@
     ]
   'es5-identifiers-future-reserved-words':
     'comment': '7.6.1.2a Future Reserved Words http://es5.github.com/#x7.6.1.2'
-    'match': '\\b(super|c(onst|lass)|import|e(num|x(tends|port)))\\b'
+    'match': '\\b(super|c(onst|lass)|import|from|as|e(num|x(tends|port)))\\b'
     'name': 'invalid.illegal.reserved.keyword.$1.es.ecmascript'
   'es5-identifiers-future-reserved-words-strict':
     'comment': '7.6.1.2b Future Reserved Words http://es5.github.com/#x7.6.1.2'
@@ -720,7 +720,7 @@
         'name': 'storage.modifier.js'
       }
       {
-        'match': '\\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|package|return|switch|throw|try|while)\\b'
+        'match': '\\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|from|as|package|return|switch|throw|try|while)\\b'
         'name': 'keyword.control.js'
       }
       {

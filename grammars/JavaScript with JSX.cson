@@ -1,6 +1,7 @@
 fileTypes: [
   "js"
   "jsx"
+  "msx"
   "react.js"
 ]
 name: "JavaScript with JSX"

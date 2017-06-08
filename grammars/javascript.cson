@@ -720,8 +720,12 @@
         'name': 'storage.modifier.js'
       }
       {
-        'match': '\\b(break|case|catch|continue|default|do|else|finally|for|goto|if|import|from|as|package|return|switch|throw|try|while)\\b'
+        'match': '\\b(break|case|catch|continue|do|else|finally|for|goto|if|import|from|as|package|return|switch|throw|try|while)\\b'
         'name': 'keyword.control.js'
+      }
+      {
+        'match': '\\b(default)\\b'
+        'name': 'keyword.operator.default.js'
       }
       {
         'match': '\\b(delete|in(stanceof)?|new|typeof|void|with)\\b'
